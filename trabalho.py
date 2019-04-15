@@ -49,12 +49,41 @@ class Automato:
         [estado,regra] = regra.split('->')
         self.regras[estado] = regra.split(',')
     def Verfifica(self,palavra):
-        for i in range(0,len(palavra))
-        if PilhaAutomato.Tamanho==0:
+        if (self.PilhaAutomato.Topo == '&') and (EstadoAtual in EstadosFinais):
+            return True
+        
+        for reg in self.Regras[EstadoAtual]:
+            #verifica se há mais de uma regra para o caminho
+            tamanho = len(Regras[EstadoAtual])
+            for b in range(0,tamanho,4):
+                [simbolo,topo,adiciona,proxEstado]=Regras[i],Regras[i+1],Regras[i+2],Regras[i+3]
+                for c in palavra:
+                    if simbolo == '&':
+                        if (Topo == PilhaAutomato.Topo() or Topo == self.Epslon) and adiciona==self.Epslon:
+                            PilhaAutomato.pop()
+                        elif Topo == PilhaAutomato.Topo()  
+
+
+
+        
+        '''
+        variables = [x for x in g if x.isupper()]
+        if len(variables) == 0:
+            return w == g
+
+        c = variables[0]
+        for r in self.rules[c]:
+            gg = g.replace(c, r, 1)
+            if self.check(w, gg):
+                return True
+        return False
+        
+        for i in range(0,len(palavra)):
+            if PilhaAutomato.Tamanho==0:
             return True 
-        if EstadoAtual == EstadoInicial:
-            simbolo = palavra[i]
-            reg = Regras[EstadoAtual]
+            if EstadoAtual == EstadoInicial:
+                simbolo = palavra[i]
+                reg = Regras[EstadoAtual]
            #verificando se existe mais de um caminho para esse nó
             if len(reg)>4:
                 for i in range(0,len(reg)):
